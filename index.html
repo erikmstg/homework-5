@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homework 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="w-screen min-h-screen bg-gradient-to-bl from-blue-300 to-violet-700"
+    >
+      <div class="max-w-screen-xl mx-auto flex">
+        <div class="w-1/2 p-4 my-28">
+          <form
+            class="flex flex-col space-y-6 rounded-2xl p-8 m-4 bg-gradient-to-tl from-gray-300 to-blue-300 shadow-xl shadow-cyan-800"
+            id="form"
+          >
+            <h1 class="text-center font-bold text-2xl">Input data</h1>
+            <div class="flex flex-wrap items-center">
+              <label class="w-1/5 mr-2 font-normal">Nama</label>
+              <input
+                type="text"
+                class="flex-1 rounded-full outline-none py-2 px-4"
+                placeholder="Enter nama"
+                id="namaInput"
+                pattern="^[a-zA-Z\s'-]{10,}$"
+                required
+              />
+            </div>
+            <div class="flex flex-wrap items-center">
+              <label class="w-1/5 mr-2 font-normal">Umur</label>
+              <input
+                type="number"
+                class="flex-1 rounded-full outline-none py-2 px-4"
+                placeholder="Enter umur"
+                id="umurInput"
+                required
+              />
+            </div>
+            <div class="flex flex-wrap items-center">
+              <label class="md:w-1/5 mr-2 font-normal sm:w-2/5"
+                >Uang Sangu</label
+              >
+              <input
+                type="number"
+                class="flex-1 rounded-full outline-none py-2 px-4"
+                placeholder="Enter uang sangu"
+                id="uangInput"
+                required
+              />
+            </div>
+            <button
+              class="py-2 px-3 w-2/5 mx-auto rounded-full outline-none bg-gradient-to-bl to-blue-300 from-violet-400 hover:scale-105 transition"
+              type="submit"
+            >
+              <span class="text-lg font-medium">Submit</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="w-1/2 p-4 my-28">
+          <table
+            class="text-black w-full table-auto text-left rounded-2xl my-4 -mx-2 bg-gradient-to-bl from-blue-300 to-gray-300 shadow-xl shadow-cyan-800"
+          >
+            <thead class="text-xl">
+              <tr>
+                <th class="px-4 py-6 font-semibold text-center">No</th>
+                <th class="px-4 py-6 font-semibold">Nama</th>
+                <th class="px-4 py-6 font-semibold">Umur</th>
+                <th class="px-4 py-6 font-semibold">Uang Sangu</th>
+              </tr>
+            </thead>
+            <tbody class="bg-gray-100 m-2 p-2"></tbody>
+            <tfoot class="m-3 p-3 text-lg">
+              <tr>
+                <td class="px-4 py-2 border-none" colspan="2">Rata-rata</td>
+                <td
+                  class="px-4 py-2 font-semibold border-none"
+                  id="avgUmur"
+                ></td>
+                <td
+                  class="px-4 py-2 font-semibold border-none"
+                  id="avgUang"
+                ></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
